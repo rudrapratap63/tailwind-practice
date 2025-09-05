@@ -10,7 +10,7 @@ function App() {
   const [expanded, setExpanded] = useState(false)
   const [active, setActive] = useState("Home");
   return (
-    <div className='flex'>
+    <div>
       <SidebarContext.Provider value={{expanded, setExpanded}} >
         <Sidebar >
           <SidebarItem icon={<Home size={20} />} setActive={setActive} active={active} text={"Home"} alert/>
@@ -23,11 +23,13 @@ function App() {
           <SidebarItem icon={<Settings size={20} />} setActive={setActive} active={active} text={"Settings"}  />
           <SidebarItem icon={<LifeBuoy size={20} />} setActive={setActive} active={active} text={"help"}  />
         </Sidebar>
-        <main className='flex-1 p-4 py-0 w-auto'>
+        <main className='h-screen overflow-y-auto w-auto'>
           <img src="https://images.unsplash.com/photo-1652267113336-8bba86c7cc44?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
             className='h-[20vh] w-full object-cover'
             alt="" />
-          <Dashboard />
+            <div className='p-4'>
+              <Dashboard />
+            </div>
         </main>
       </SidebarContext.Provider>
     </div>
