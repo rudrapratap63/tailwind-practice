@@ -20,7 +20,7 @@ export default function Sidebar({children}) {
    return ( 
       <aside className={`h-screen bg-white fixed top-0 left-0 ${expanded && "z-10"}`}>
          <nav className='h-full flex flex-col border-r border-gray-100 shadow-sm'>
-            <div className='flex justify-between items-center p-4'>
+            <div className='flex justify-between items-center p-2'>
                <img src={logo} className={`overflow-hidden
                   transition-all ${expanded ? "w-40 ml-1" : "w-0" }`} 
                   alt="" />
@@ -29,11 +29,11 @@ export default function Sidebar({children}) {
                </button>
             </div>
 
-            <ul className='flex-1 px-3'>
+            <ul className='flex-1 px-2'>
                {children}
             </ul>
 
-            <div className='border-t border-gray-100 flex align-center justify-center p-3'>
+            <div className='border-t border-gray-100 flex align-center justify-center p-3 px-2'>
                <img src={user} className='w-8 h-10 rounded-md' alt="user" />
                <div className={`flex justify-between ${expanded ? "w-52 ml-3" : "w-0"} 
                   items-center overflow-hidden transition-all`}>
