@@ -20,7 +20,7 @@ export default function Sidebar({children}) {
    return ( 
       <aside className={`h-screen bg-white fixed top-0 left-0 ${expanded && "z-10"}`}>
          <nav className='h-full flex flex-col border-r border-gray-100 shadow-sm'>
-            <div className='flex justify-between items-center p-2'>
+            <div className='flex justify-between items-center p-2 py-4'>
                <img src={logo} className={`overflow-hidden
                   transition-all ${expanded ? "w-40 ml-1" : "w-0" }`} 
                   alt="" />
